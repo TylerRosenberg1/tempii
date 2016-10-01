@@ -29,7 +29,6 @@
             vm.diffPositive = vm.today.high.fahrenheit - vm.yesterday.high
             vm.diffNegative = null;
           } else {
-            console.log("negative");
             vm.diffNegative = vm.yesterday.high - vm.today.high.fahrenheit
             vm.diffPositive = null;
           }
