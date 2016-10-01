@@ -13,7 +13,7 @@
   function routerFunction($stateProvider) {
     $stateProvider
     .state("tempiiIndex", {
-      url: "/tempii",
+      url: "/search",
       controller: "tempiiIndexController",
       controllerAs: "vm",
       templateUrl: "views/index.html"
