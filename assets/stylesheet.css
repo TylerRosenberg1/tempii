@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(207, 40, 80);
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 700;
+  color: white;
+}
+
+h3 {
+  font-weight: 700;
+  color: white;
+}
+
+p {
+  color: white;
+  font-weight: 300;
+  margin-top: 2em;
+}
+
+.form-group {
+  margin-bottom: 3em;
+}
+
+input {
+  font-size: 1.5em;
+  font-weight: 300;
+  width: 95%;
+  padding: 0.3em 0.3em;
+  margin-top: 0.5em;
+  border-style: none;
+  border-radius: 5px;
+}
+
+button {
+  background-color: rgb(28, 230, 199);
+  border-style: none;
+  border-radius: 5px;
+  padding: 0.5em 0.8em;
+  font-weight: 500;
+  color: rgb(74, 74, 74);
+}

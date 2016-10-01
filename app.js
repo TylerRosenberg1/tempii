@@ -16,7 +16,7 @@
       url: "/tempii",
       controller: "tempiiIndexController",
       controllerAs: "vm",
-      templateUrl: "views/tempii/index.html"
+      templateUrl: "views/index.html"
     })
   }
 
