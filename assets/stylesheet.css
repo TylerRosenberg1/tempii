@@ -13,7 +13,6 @@ main {
 }
 
 .logo {
-  font-family: 'Baloo Bhai', cursive;
   font-size: 3em;
   padding-bottom: 0;
   color: rgb(96, 228, 208);
@@ -22,6 +21,7 @@ main {
 h1 {
   font-weight: 700;
   color: white;
+  font-family: 'Baloo Bhai', cursive;
 }
 
 h5 {
