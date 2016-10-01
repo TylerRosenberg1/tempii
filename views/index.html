@@ -1,7 +1,7 @@
 <h1 class="logo">TEMPii</h1>
 
 <p>
-  Tempii tells you how much warmer or cooler today's temperature compared to yesterday's. Simply enter a city, and the state's abbreviation.
+  Tempii tells you how much warmer or cooler today's temperature is compared to yesterday's. Simply enter a city, and the state's abbreviation.
 </p>
 
 <div class="error" data-ng-if="vm.error">
@@ -10,7 +10,7 @@
   </p>
 </div>
 
-<h2>Today In</h2>
+<h5>Today In</h5>
 
 <div class="form-group">
   <form>
@@ -19,7 +19,7 @@
   </form>
 </div>
 
-<h2 data-ng-if="vm.city&&vm.state">It Will Be</h2>
+<h5 data-ng-if="vm.city&&vm.state">It Will Be</h5>
 <button type="submit" data-ng-click="vm.search()" data-ng-if="vm.city&&vm.state">Search</button>
 
 <h3 data-ng-if="vm.diffPositive">
@@ -28,4 +28,4 @@
 <h3 data-ng-if="vm.diffNegative">
   {{vm.diffNegative}}&degF Colder :(
 </h3>
-<h2 data-ng-if="vm.diffNegative || vm.diffPositive">Than It Was Yesterday</h2>
+<h5 data-ng-if="vm.diffNegative || vm.diffPositive">Than It Was Yesterday</h5>
