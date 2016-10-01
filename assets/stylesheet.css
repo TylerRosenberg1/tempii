@@ -12,19 +12,26 @@ main {
   text-align: center;
 }
 
+.logo {
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 3em;
+  padding-bottom: 0;
+  color: rgb(96, 228, 208);
+}
+
 h1 {
   font-weight: 700;
   color: white;
 }
 
-h3 {
+h2 {
   font-weight: 700;
   color: white;
 }
 
 p {
-  color: white;
-  font-weight: 300;
+  color: rgb(34, 34, 34);
+  font-weight: 400;
   margin-top: 2em;
 }
 
@@ -43,10 +50,40 @@ input {
 }
 
 button {
-  background-color: rgb(28, 230, 199);
+  background-color: rgb(96, 228, 208);
   border-style: none;
   border-radius: 5px;
   padding: 0.5em 0.8em;
-  font-weight: 500;
+  font-weight: 700;
   color: rgb(74, 74, 74);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.error {
+  background-color: white;
+  padding-top: 0.1em;
+  padding-bottom: 1em;
+  font-size: 0.8em;
+  border-radius: 5px;
+  border: 1px solid rgb(125, 125, 125);
+}
+
+.error-font {
+  color: red;
+  font-weight: 700;
+}
+
+@media (min-width: 1000px) {
+
+.logo {
+  font-size: 2em;
+}
+
+input {
+  font-size: 3em;
+}
+
 }

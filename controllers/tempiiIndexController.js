@@ -16,18 +16,25 @@
     vm.search = function(city, state) {
       $http({
         method: 'POST',
-        url: 'http://localhost:7500/search',
+        url: 'https://tempii.herokuapp.com/search',
         data: {city: vm.city.split(' ').join('_'), state: vm.state}
       }).then(function successCallback(res) {
-        vm.today = res.data.today;
-        vm.yesterday = res.data.yesterday;
-        if (vm.today.high.fahrenheit > vm.yesterday.high) {
-          console.log("pos");
-          vm.diffPositive = vm.today.high.fahrenheit - vm.yesterday.high
+        if (res.data.error) {
+          vm.error = res.data.error;
         } else {
-          console.log("neg");
-          vm.diffNegative = vm.yesterday.high - vm.today.high.fahrenheit
+          vm.error = null;
+          vm.today = res.data.today;
+          vm.yesterday = res.data.yesterday;
+          if (vm.today.high.fahrenheit > vm.yesterday.high) {
+            console.log("pos");
+            vm.diffPositive = vm.today.high.fahrenheit - vm.yesterday.high
+          } else {
+            console.log("neg");
+            vm.diffNegative = vm.yesterday.high - vm.today.high.fahrenheit
+          }
         }
+      }, function errorCallback(res) {
+
       })
     }
   }
