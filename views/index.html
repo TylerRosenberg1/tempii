@@ -22,10 +22,10 @@
 <h5 data-ng-if="vm.city&&vm.state">It Will Be</h5>
 <button type="submit" data-ng-click="vm.search()" data-ng-if="vm.city&&vm.state">Search</button>
 
-<h1 data-ng-if="vm.diffPositive !== null">
+<h1 data-ng-if="vm.diffPositive">
   {{vm.diffPositive}}&degF Warmer :)
 </h1>
-<h1 data-ng-if="vm.diffNegative !== null">
+<h1 data-ng-if="vm.diffNegative">
   {{vm.diffNegative}}&degF Colder :(
 </h1>
 <h5 data-ng-if="vm.diffNegative || vm.diffPositive">Than It Was Yesterday</h5>

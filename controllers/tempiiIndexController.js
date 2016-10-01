@@ -5,20 +5,18 @@
   .module("tempii")
   .controller("tempiiIndexController", [
     "$http",
+    "tempiiFactory",
     tempiiIndexControllerFunction
   ])
 
-  function tempiiIndexControllerFunction($http) {
+  function tempiiIndexControllerFunction($http, tempiiFactory) {
     var vm = this;
     vm.city;
     vm.state;
 
-    vm.search = function(city, state) {
-      $http({
-        method: 'POST',
-        url: 'https://tempii.herokuapp.com/search',
-        data: {city: vm.city.split(' ').join('_'), state: vm.state}
-      }).then(function successCallback(res) {
+    vm.search = function() {
+      tempiiFactory.search(vm.city, vm.state)
+      .then(function successCallback(res) {
         if (res.data.error) {
           vm.error = res.data.error;
         } else {
