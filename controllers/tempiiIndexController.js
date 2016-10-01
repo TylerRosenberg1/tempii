@@ -26,11 +26,12 @@
           vm.today = res.data.today;
           vm.yesterday = res.data.yesterday;
           if (vm.today.high.fahrenheit > vm.yesterday.high) {
-            console.log("pos");
             vm.diffPositive = vm.today.high.fahrenheit - vm.yesterday.high
+            vm.diffNegative = null;
           } else {
-            console.log("neg");
+            console.log("negative");
             vm.diffNegative = vm.yesterday.high - vm.today.high.fahrenheit
+            vm.diffPositive = null;
           }
         }
       }, function errorCallback(res) {
